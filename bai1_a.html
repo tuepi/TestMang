@@ -32,7 +32,7 @@
         // Bai 1. d)
         let max = arr[0][0];
         for (let i = 0; i < arr.length; i++) {
-            for (let j = 0; j < arr[i].length; j++) {
+            for (let j = 1; j < arr[i].length; j++) {
                 if (arr[i][j] > max) {
                    max = arr[i][j];
                 }
@@ -51,12 +51,24 @@
             }
         }
         let min = arr1[0];
-        for (let z = 0; z < arr1.length; z++) {
+        for (let z = 1; z < arr1.length; z++) {
             if (arr1[z] < min) {
                 min = arr1[z];
             }
         }
-        document.write('Min trong các phần tử chẵn là ' + min);
+        document.write('Min trong các phần tử chẵn là ' + min + '<hr>');
+
+        // Bai 1. f)
+        let maxx;
+        for (let i = 0; i < arr.length; i++) {
+            for (let j = 0; j < arr[i].length; j++) {
+                maxx = arr[i][0];
+                if (arr[i][j] > maxx) {
+                    maxx = arr[i][j];
+                }
+            }
+            document.write('Giá trị lớn nhất trong hàng ' + i + ' là ' + maxx + '<br>');
+        }
     </script>
 </body>
 </html>
