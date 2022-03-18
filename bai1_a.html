@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        // Bai 1. a,b,c)
+        let arr = [
+            [1,4,3],
+            [1,9,8],
+            [14,19,98]
+        ];
+        let count = 0;
+        let tich = 1;
+        document.write('Các phần tử có giá trị chẵn trong mảng là : <br>');
+        for (let i = 0; i < arr.length; i++) {
+            for (let j = 0; j < arr[i].length; j++) {
+                if (arr[i][j] % 2 == 0) {
+                document.write(arr[i][j] + "<br>");
+                count++;
+                } else {
+                    tich = tich * arr[i][j];
+                }
+            }
+        }
+        document.write("<hr>Số phần tử giá trị chẵn là " + count + "<br><hr>");
+        document.write("Tích các phần tử giá trị lẻ là " + tich);
+        document.write("<hr>");
+
+        // Bai 1. d)
+        let max = arr[0][0];
+        for (let i = 0; i < arr.length; i++) {
+            for (let j = 0; j < arr[i].length; j++) {
+                if (arr[i][j] > max) {
+                   max = arr[i][j];
+                }
+            }
+        }
+        document.write('Phần tử Max trong mảng là ' + max + "<hr>");
+
+        // Bài 1. e)
+
+        let arr1 = [];
+        for (let i = 0; i < arr.length; i++) {
+            for (let j = 0; j < arr[i].length; j++) {
+                if (arr[i][j] % 2 == 0) {
+                      arr1.push(arr[i][j]);
+                }
+            }
+        }
+        let min = arr1[0];
+        for (let z = 0; z < arr1.length; z++) {
+            if (arr1[z] < min) {
+                min = arr1[z];
+            }
+        }
+        document.write('Min trong các phần tử chẵn là ' + min);
+    </script>
+</body>
+</html>
